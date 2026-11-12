@@ -1,0 +1,44 @@
+
+version: 2
+
+models:
+  - name: fct_order_items_custom
+    description: "Order item analytics model for Olist"
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+      - name: order_item_id
+        data_tests:
+          - not_null
+      - name: price
+        data_tests:
+          - not_null
+      - name: freight_value
+        data_tests:
+          - not_null
+      - name: total_item_value
+        data_tests:
+          - not_null
+
+  - name: kpi_sales
+    description: "Aggregated sales KPIs for Olist"
+    columns:
+      - name: total_orders
+        data_tests:
+          - not_null
+      - name: total_order_items
+        data_tests:
+          - not_null
+      - name: total_product_sales
+        data_tests:
+          - not_null
+      - name: total_freight
+        data_tests:
+          - not_null
+      - name: total_sales_with_freight
+        data_tests:
+          - not_null
+      - name: average_item_price
+        data_tests:
+          - not_null

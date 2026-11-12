@@ -1,5 +1,53 @@
-data/
-.env
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
 .venv/
+.venv*/
+**/.venv/
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+
+# Data and generated outputs
+data/
+outputs/
+logs/
+*.log
+
+# Spark and Delta
+.sparkStaging/
+spark-warehouse/
+*.parquet
+
+# dbt generated files
+olist_analytics/target/
+olist_analytics/logs/
+olist_analytics/dbt_packages/
+
+# Temporary and backup files
+*.tmp
+*.bak
+spark_error.txt
+
+# Local files that may contain credentials
+code oumaima.txt
+
+# Credentials and private keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Test coverage and system files
+.coverage
+htmlcov/
+.DS_Store
+Thumbs.db
+
+# Generated monitoring reports
+monitoring/reports/*.csv
